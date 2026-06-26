@@ -1,36 +1,18 @@
-\## Scan 2: Remediation and Pipeline Validation
+## Scan 2: Remediation and Pipeline Validation
 
+**Source:** GitHub Actions  
+**Target:** Application repository  
+**Tools:** Semgrep, Gitleaks, Trivy, Checkov  
+**Pipeline:** DevSecOps Security Pipeline  
 
+### Activity Performed
+I remediated the pipeline issues by fixing the GitHub Actions workflow syntax, correcting the Dockerfile configuration, and removing the demo secret. I then reran the DevSecOps pipeline.
 
-\*\*Source:\*\* GitHub Actions  
+### Result
+The follow-up pipeline run completed successfully. Semgrep, Gitleaks, Trivy filesystem scanning, Trivy container image scanning, and Checkov IaC scanning all passed.
 
-\*\*Target:\*\* Application repository  
+### Security Relevance
+This demonstrates a key DevSecOps workflow: identify issues, remediate them, and validate the fix through automated security checks. CI/CD security pipelines help prevent insecure code, hardcoded secrets, vulnerable containers, dependency risks, and infrastructure misconfigurations from reaching production.
 
-\*\*Tools:\*\* Semgrep, Gitleaks, Trivy, Checkov  
-
-\*\*Pipeline:\*\* DevSecOps Security Pipeline  
-
-
-
-\### Activity Performed
-
-I reviewed the initial pipeline findings, removed the demo secret, restricted the Terraform security group rule, and reran the security pipeline.
-
-
-
-\### Result
-
-The follow-up scan showed that the identified demo secret was removed and the Terraform security group rule was improved.
-
-
-
-\### Security Relevance
-
-Security engineering requires not only identifying issues, but also validating that remediation steps work. CI/CD security pipelines help enforce secure development practices and provide repeatable evidence of control validation.
-
-
-
-\### Evidence
-
-Screenshot: screenshots/03-pipeline-after-remediation.png
-
+### Evidence
+Screenshot: screenshots/02-pipeline-after-remediation.png

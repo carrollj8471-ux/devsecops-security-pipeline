@@ -1,0 +1,15 @@
+*.zip
+*.tar
+*.gz
+*.7z
+*.env
+.env
+*.key
+*.pem
+*.pfx
+*.crt
+*.log
+__pycache__/
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup

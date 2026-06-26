@@ -72,6 +72,26 @@ This project demonstrates a DevSecOps security pipeline built with GitHub Action
 
 
 
+\## Screenshots
+
+
+
+\### Initial Pipeline Run with Findings
+
+
+
+!\[Initial Pipeline Run](screenshots/01-pipeline-initial-run.png)
+
+
+
+\### Pipeline After Remediation
+
+
+
+!\[Pipeline After Remediation](screenshots/02-pipeline-after-remediation.png)
+
+
+
 \## Security Findings Demonstrated
 
 

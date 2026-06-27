@@ -1,60 +1,31 @@
-\# DevSecOps Security Pipeline
+# DevSecOps Security Pipeline
 
-
-
-\## Overview
-
-
+## Overview
 
 This project demonstrates a DevSecOps security pipeline built with GitHub Actions. The pipeline automatically scans application code, secrets, dependencies, container images, and Terraform infrastructure-as-code.
 
+## Tools Used
 
+- GitHub Actions
+- Semgrep
+- Gitleaks
+- Trivy
+- Checkov
+- Docker
+- Terraform
+- Python Flask
 
-\## Tools Used
+## Skills Demonstrated
 
+- CI/CD security automation
+- Static application security testing
+- Secret detection
+- Container image scanning
+- Infrastructure-as-code scanning
+- Vulnerability remediation
+- Security documentation
 
-
-\- GitHub Actions
-
-\- Semgrep
-
-\- Gitleaks
-
-\- Trivy
-
-\- Checkov
-
-\- Docker
-
-\- Terraform
-
-\- Python Flask
-
-
-
-\## Skills Demonstrated
-
-
-
-\- CI/CD security automation
-
-\- Static application security testing
-
-\- Secret detection
-
-\- Container image scanning
-
-\- Infrastructure-as-code scanning
-
-\- Vulnerability remediation
-
-\- Security documentation
-
-
-
-\## Pipeline Jobs
-
-
+## Pipeline Jobs
 
 | Job | Purpose |
 
@@ -70,31 +41,21 @@ This project demonstrates a DevSecOps security pipeline built with GitHub Action
 
 | Checkov IaC Scan | Scans Terraform for cloud misconfigurations |
 
+## Screenshots
 
+### Initial Pipeline Run Before Remediation
 
-\## Screenshots
+![Initial Pipeline Run Before Remediation](screenshots/01-pipeline-before-remediation.png)
 
+The initial pipeline run showed security and build validation failures. This represented the first state of the project before remediation.
 
+### Pipeline Run After Remediation
 
-\### Initial Pipeline Run with Findings
+![Pipeline Run After Remediation](screenshots/02-pipeline-after-remediation.png)
 
+After fixing the workflow configuration, correcting the Dockerfile, and removing the demo secret, all DevSecOps pipeline jobs completed successfully.
 
-
-!\[Initial Pipeline Run](screenshots/01-pipeline-initial-run.png)
-
-
-
-\### Pipeline After Remediation
-
-
-
-!\[Pipeline After Remediation](screenshots/02-pipeline-after-remediation.png)
-
-
-
-\## Security Findings Demonstrated
-
-
+## Security Findings Demonstrated
 
 | Finding | Tool | Remediation |
 
@@ -106,11 +67,7 @@ This project demonstrates a DevSecOps security pipeline built with GitHub Action
 
 | Dependency/container findings | Trivy | Reviewed vulnerability severity and remediation guidance |
 
-
-
-\## Lessons Learned
-
-
+## Lessons Learned
 
 This project shows how DevSecOps pipelines help detect issues earlier in the development lifecycle. Automated scanning improves visibility, supports secure development, and provides repeatable evidence that security controls are working.
 
